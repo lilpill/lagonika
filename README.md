@@ -25,8 +25,6 @@
  python Lagonika.py
  ```
  
-5. Watch Magic Happen.
- 
  # Preview
  <p>
   <img src="https://cdn.discordapp.com/attachments/1041289530029908029/1072242081701044337/image.png"/>
