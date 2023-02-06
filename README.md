@@ -6,6 +6,11 @@
  # Status
 <p><b>Not Working.</b><span> 😞 </span></p>
 
+ # Preview
+ <p>
+  <img src="https://cdn.discordapp.com/attachments/1041289530029908029/1072248091895418970/image.png"/>
+ </p>
+ 
  # Install
  1. Download Lagonika Python file.
  
@@ -24,8 +29,3 @@
  ```
  python Lagonika.py
  ```
- 
- # Preview
- <p>
-  <img src="https://cdn.discordapp.com/attachments/1041289530029908029/1072248091895418970/image.png"/>
- </p>
