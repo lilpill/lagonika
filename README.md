@@ -27,5 +27,5 @@
  
  # Preview
  <p>
-  <img src="https://cdn.discordapp.com/attachments/1041289530029908029/1072242081701044337/image.png"/>
+  <img src="https://cdn.discordapp.com/attachments/1041289530029908029/1072248091895418970/image.png"/>
  </p>
