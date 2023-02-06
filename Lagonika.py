@@ -8,22 +8,30 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}
 
 def check_product():
+    
+    # Creating the previous string to check if this change
+    global previous_click
+
+    # Request Page Source
     html = requests.get(URL, headers=headers)
 
     # Parse the HTML
-    global previous_click
     soup = BeautifulSoup(html.text, 'lxml')
 
-    # Find the first product element
+    # Find the first product that shows in the site
     product = soup.find('div', id='wpv-view-layout-262648')
-    # product = soup.find('div', class_='post-1208517 prosfores type-prosfores status-publish has-post-thumbnail hentry category-moda katastima-sportsfactorygr types-151 no-featured-image-padding lagonika-neutralrating lagonika-expired lagonika-listview la-expired-offer')
 
+    # Find the click of the product
     click = product.find('div',class_='la-des-prosfora-btn').find('a')['href']
+    
+    # Check if the click button of the product is different from the previous product
     if str(click) != str(previous_click):
-        # The image has changed, send a message to the Discord webhook
+        
+        # The click button has changed, find the details of the product
         name = product.find('h3', class_='la-listview-title')
         site = name.find('a')['href']
         name = name.text
+
         subtitle = product.find('div', class_='la-listview-subtitle')
         if subtitle.find('div',class_='la-listview-store'):
             shop = subtitle.find('div',class_='la-listview-store').text
@@ -58,14 +66,13 @@ def check_product():
         print("Found Item #" +str() + name + "\n")
     
 def send_to_discord(name, shop, expire, description, discount, coupon, time, site, image, click):
-    webhook_url = "https://discord.com/api/webhooks/956189847784161290/Q79UQDKHS2P3i3oJslQhN_dKKk_UUH_B-mFUqbdi6iSYhnrtjNyhCPZ4XMS1eRGRl2uw"
-
+    webhook_url = "INSERT YOUR URL"
     # Create the payload for the Discord webhook
     payload = {
         "embeds": [{
             "author":
             {
-                "name": 'LilPill#1001',
+                "name": 'LilPill',
                 "icon_url": 'https://cdn.discordapp.com/avatars/234011025286889475/0ddc1715f7278b595d81c637f0fcb620.png',
             },
             "thumbnail":
