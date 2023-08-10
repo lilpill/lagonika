@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
+# Url of the site (Don't change it will not work in any other site)
 URL = "https://www.lagonika.gr"
 
 # Put your own Webhook here
