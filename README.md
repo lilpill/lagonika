@@ -23,7 +23,7 @@
  3. Install required packages.
  
  ```
- pip install -r requirements
+ pip install -r requirements.txt
  ```
  4. Open Editor and put your Webhook URL.
  <img src="https://cdn.discordapp.com/attachments/1120648401453854831/1139147057601454210/image.png">
